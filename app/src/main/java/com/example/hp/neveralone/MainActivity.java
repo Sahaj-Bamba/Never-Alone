@@ -139,6 +139,10 @@ public class MainActivity extends AppCompatActivity {
             case R.id.Ev :
                 startActivity(new Intent(MainActivity.this,CreateEvent.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
                 return true;
+
+            case  R.id.companion :
+                startActivity(new Intent(MainActivity.this,Companion.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
+                return true;
         }
         return  false;
     }

@@ -11,4 +11,8 @@
         android:title="Event"/>
 
 
+    <item
+        android:id="@+id/companion"
+        android:title="Companion"
+        app:showAsAction="never" />
 </menu>

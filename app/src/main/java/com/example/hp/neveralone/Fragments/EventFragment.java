@@ -31,7 +31,7 @@ import java.util.List;
 
 public class EventFragment extends Fragment {
 
-    private RecyclerView recyclerView;
+    private RecyclerView recyclerView,recyclerUser;
 
     private EventAdapter eventAdapter;
     private List<Event> mEvents;
@@ -47,6 +47,7 @@ public class EventFragment extends Fragment {
         recyclerView = view.findViewById(R.id.recycler_view_events);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        recyclerUser = view.findViewById(R.id.recycler_view_events);
         mEvents = new ArrayList<>();
 
         readEvents();
@@ -73,33 +74,39 @@ public class EventFragment extends Fragment {
 
     private void searchUsers(String s) {
 
-        final FirebaseUser fuser = FirebaseAuth.getInstance().getCurrentUser();
-        Query query = FirebaseDatabase.getInstance().getReference("Events").orderByChild("username")
-                .startAt(s)
-                .endAt(s+"\uf8ff");
-        query.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if (search_events.getText().toString().equals("")) {
-                    mEvents.clear();
-                    for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                        Event event = snapshot.getValue(Event.class);
+        if(s!="") {
+            final FirebaseUser fuser = FirebaseAuth.getInstance().getCurrentUser();
+            Query query = FirebaseDatabase.getInstance().getReference("Events").orderByChild("search")
+                    .startAt(s)
+                    .endAt(s + "\uf8ff");
+            query.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    if (search_events.getText().toString().equals("")) {
+                        mEvents.clear();
+                        for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                            Event event = snapshot.getValue(Event.class);
 
-                        assert event != null;
-                        if (event.getOrganiser().equals(fuser.getUid())) {
-                            mEvents.add(event);
+                            assert event != null;
+                            if (!event.getOrganiser().equals(fuser.getUid())){
+                                mEvents.add(event);
+                            }
+
                         }
-
+                        eventAdapter = new EventAdapter(getContext(), mEvents);
+                        recyclerView.setAdapter(eventAdapter);
                     }
-                    eventAdapter = new EventAdapter(getContext(), mEvents);
-                    recyclerView.setAdapter(eventAdapter);
                 }
-            }
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
 
-            }
-        });
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                }
+            });
+        }
+        else {
+            readEvents();
+        }
     }
 
     private void readEvents(){
@@ -115,18 +122,14 @@ public class EventFragment extends Fragment {
 
                     assert event!=null;
                     assert firebaseUser!= null;
-                    if(event == (null))
-                        System.out.println("UserNull");
-//                    else if(firebaseUser.equals(null))
-//                        System.out.println("FireNull");
-                    else {
+                    if(event !=null && event.getOrganiser()==firebaseUser.getUid())
                         mEvents.add(event);
                     }
-                }
-
                 eventAdapter = new EventAdapter(getContext(),mEvents);
                 recyclerView.setAdapter(eventAdapter);
             }
+
+
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {

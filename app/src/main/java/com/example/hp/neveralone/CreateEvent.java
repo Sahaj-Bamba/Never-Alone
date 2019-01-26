@@ -35,7 +35,7 @@ public class CreateEvent extends AppCompatActivity implements DatePickerDialog.O
         btn_create = findViewById(R.id.EvCreateBtn);
         btn_pick = findViewById(R.id.btn_click);
         btn_time = findViewById(R.id.btn_time);
-        Description = findViewById(R.id.Ename);
+        Destination = findViewById(R.id.Ename);
         Description = findViewById(R.id.desc);
         btn_pick.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,7 +51,7 @@ public class CreateEvent extends AppCompatActivity implements DatePickerDialog.O
         btn_create.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               String destination = Description.getText().toString();
+               String destination = Destination.getText().toString();
                 String description = Description.getText().toString();
 
                 FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
@@ -83,6 +83,7 @@ public class CreateEvent extends AppCompatActivity implements DatePickerDialog.O
         hashMap.put("Year",year);
         hashMap.put("Hour",hour);
         hashMap.put("Minutes",minutes);
+        hashMap.put("search",destination);
         reference.child("Events").push().setValue(hashMap);
 
     }
