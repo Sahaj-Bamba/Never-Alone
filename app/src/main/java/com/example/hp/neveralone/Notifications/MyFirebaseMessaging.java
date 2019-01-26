@@ -1,4 +1,4 @@
-package com.example.hp.nothing_justtry.Notifications;
+package com.example.hp.neveralone.Notifications;
 
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -9,7 +9,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.NotificationCompat;
 
-import com.example.hp.nothing_justtry.MessageActivity;
+import com.example.hp.neveralone.MessageActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.messaging.FirebaseMessagingService;

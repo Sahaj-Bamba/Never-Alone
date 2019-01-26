@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#808080"
-    tools:context=".Fragments.ChatsFragment">
+    tools:context="com.example.hp.neveralone.Fragments.ChatsFragment">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_view"

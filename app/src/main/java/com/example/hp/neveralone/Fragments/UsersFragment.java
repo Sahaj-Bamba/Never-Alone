@@ -1,7 +1,5 @@
-package com.example.hp.nothing_justtry.Fragments;
+package com.example.hp.neveralone.Fragments;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
@@ -14,9 +12,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 
-import com.example.hp.nothing_justtry.Adapter.UserAdapter;
-import com.example.hp.nothing_justtry.Model.User;
-import com.example.hp.nothing_justtry.R;
+import com.example.hp.neveralone.Adapter.UserAdapter;
+import com.example.hp.neveralone.Model.User;
+import com.example.hp.neveralone.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;

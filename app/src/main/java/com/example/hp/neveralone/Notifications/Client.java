@@ -1,4 +1,4 @@
-package com.example.hp.nothing_justtry.Notifications;
+package com.example.hp.neveralone.Notifications;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.hp.neveralone", appContext.getPackageName());
+        assertEquals("com.example.hp.nothing_justtry", appContext.getPackageName());
     }
 }

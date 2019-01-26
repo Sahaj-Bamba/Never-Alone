@@ -1,4 +1,4 @@
-package com.example.hp.nothing_justtry.Fragments;
+package com.example.hp.neveralone.Fragments;
 
 import android.app.ProgressDialog;
 import android.content.ContentResolver;
@@ -17,8 +17,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-import com.example.hp.nothing_justtry.Model.User;
-import com.example.hp.nothing_justtry.R;
+import com.example.hp.neveralone.Model.User;
+import com.example.hp.neveralone.R;
 import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;

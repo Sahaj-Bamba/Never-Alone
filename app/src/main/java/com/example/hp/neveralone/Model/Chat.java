@@ -1,4 +1,4 @@
-package com.example.hp.nothing_justtry.Model;
+package com.example.hp.neveralone.Model;
 
 public class Chat {
 

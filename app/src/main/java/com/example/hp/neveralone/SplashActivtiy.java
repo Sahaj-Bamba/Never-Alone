@@ -1,21 +1,25 @@
 package com.example.hp.neveralone;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
+import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.text.Html;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.example.hp.neveralone.R;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 public class SplashActivtiy extends AppCompatActivity {
 
     private ViewPager viewPager ;
     private LinearLayout linearLayout;
+
+    FirebaseUser firebaseUser;
 
     private TextView[] mDots;
 
@@ -31,19 +35,13 @@ public class SplashActivtiy extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_activtiy);
+        firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
 
-        SharedPreferences settings = this.getSharedPreferences("appInfo", 0);
-        boolean firstTime = settings.getBoolean("first_time", true);
-        if (firstTime) {
-            SharedPreferences.Editor editor = settings.edit();
-            editor.putBoolean("first_time", false);
-            editor.commit();
-        }
-        else {
-            Intent intent = new Intent(SplashActivtiy.this,LoginActivity.class);
+        if(firebaseUser != null){
+            Intent intent = new Intent(SplashActivtiy.this , LoginActivity.class);
             startActivity(intent);
-            finish();
         }
+
 
         viewPager= (ViewPager) findViewById(R.id.viewpager);
         linearLayout = (LinearLayout)findViewById(R.id.dots);

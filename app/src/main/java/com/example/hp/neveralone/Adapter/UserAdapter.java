@@ -1,4 +1,4 @@
-package com.example.hp.nothing_justtry.Adapter;
+package com.example.hp.neveralone.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,10 +11,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.example.hp.nothing_justtry.MessageActivity;
-import com.example.hp.nothing_justtry.Model.Chat;
-import com.example.hp.nothing_justtry.Model.User;
-import com.example.hp.nothing_justtry.R;
+import com.example.hp.neveralone.MessageActivity;
+import com.example.hp.neveralone.Model.Chat;
+import com.example.hp.neveralone.Model.User;
+import com.example.hp.neveralone.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;

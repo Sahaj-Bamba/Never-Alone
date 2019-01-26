@@ -1,6 +1,6 @@
-package com.example.hp.nothing_justtry.Fragments;
+package com.example.hp.neveralone.Fragments;
 
-import com.example.hp.nothing_justtry.Notifications.MyResponse;
+import com.example.hp.neveralone.Notifications.MyResponse;
 
 import retrofit2.Call;
 import retrofit2.http.Body;

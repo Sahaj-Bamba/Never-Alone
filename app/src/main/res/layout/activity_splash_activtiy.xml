@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/main_background"
-    tools:context=".SplashActivtiy">
+    tools:context="com.example.hp.neveralone.SplashActivtiy">
 
     <android.support.v4.view.ViewPager
         android:id="@+id/viewpager"

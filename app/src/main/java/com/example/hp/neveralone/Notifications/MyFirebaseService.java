@@ -1,11 +1,10 @@
-package com.example.hp.nothing_justtry.Notifications;
+package com.example.hp.neveralone.Notifications;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.iid.FirebaseInstanceId;
-import com.google.firebase.iid.FirebaseInstanceIdReceiver;
 import com.google.firebase.iid.FirebaseInstanceIdService;
 
 public class MyFirebaseService extends FirebaseInstanceIdService{

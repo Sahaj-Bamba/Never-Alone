@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.hp.nothing_justtry">
+    package="com.example.hp.neveralone">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -13,7 +13,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".StartActivity">
+        <activity android:name="com.example.hp.neveralone.StartActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,22 +21,22 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".RegisterActivity"
-            android:parentActivityName=".StartActivity" />
-        <activity android:name=".MainActivity" />
+            android:name="com.example.hp.neveralone.RegisterActivity"
+            android:parentActivityName="com.example.hp.neveralone.StartActivity" />
+        <activity android:name="com.example.hp.neveralone.MainActivity" />
         <activity
-            android:name=".LoginActivity"
-            android:parentActivityName=".StartActivity" />
-        <activity android:name=".MessageActivity" />
+            android:name="com.example.hp.neveralone.LoginActivity"
+            android:parentActivityName="com.example.hp.neveralone.StartActivity" />
+        <activity android:name="com.example.hp.neveralone.MessageActivity" />
 
-        <activity android:name=".ResetPasswordActivity"
-            android:parentActivityName=".LoginActivity">
+        <activity android:name="com.example.hp.neveralone.ResetPasswordActivity"
+            android:parentActivityName="com.example.hp.neveralone.LoginActivity">
         </activity>
-        <activity android:name=".SplashActivtiy" android:parentActivityName=".StartActivity">
+        <activity android:name="com.example.hp.neveralone.SplashActivtiy" android:parentActivityName="com.example.hp.neveralone.StartActivity">
 
         </activity>
         
-        <service android:name=".Notifications.MyFirebaseService"
+        <service android:name="com.example.hp.neveralone.Notifications.MyFirebaseService"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
@@ -45,7 +45,7 @@
         </service>
 
 
-        <service android:name=".Notifications.MyFirebaseMessaging"
+        <service android:name="com.example.hp.neveralone.Notifications.MyFirebaseMessaging"
             android:enabled="true"
             android:exported="true">
             <intent-filter>

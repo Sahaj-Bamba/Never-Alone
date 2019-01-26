@@ -1,4 +1,4 @@
-package com.example.hp.nothing_justtry;
+package com.example.hp.neveralone;
 
 import android.content.Intent;
 import android.os.Build;
@@ -12,26 +12,21 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.support.v7.widget.Toolbar;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-import com.example.hp.nothing_justtry.Adapter.MessageAdapter;
-import com.example.hp.nothing_justtry.Fragments.APIService;
-import com.example.hp.nothing_justtry.Model.Chat;
-import com.example.hp.nothing_justtry.Model.User;
-import com.example.hp.nothing_justtry.Notifications.Client;
-import com.example.hp.nothing_justtry.Notifications.Data;
-import com.example.hp.nothing_justtry.Notifications.MyResponse;
-import com.example.hp.nothing_justtry.Notifications.Sender;
-import com.example.hp.nothing_justtry.Notifications.Token;
+import com.example.hp.neveralone.Adapter.MessageAdapter;
+import com.example.hp.neveralone.Fragments.APIService;
+import com.example.hp.neveralone.Model.Chat;
+import com.example.hp.neveralone.Model.User;
+import com.example.hp.neveralone.Notifications.Client;
+import com.example.hp.neveralone.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 
@@ -40,10 +35,6 @@ import java.util.HashMap;
 import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
-import retrofit2.http.Body;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 public class MessageActivity extends AppCompatActivity {
 
