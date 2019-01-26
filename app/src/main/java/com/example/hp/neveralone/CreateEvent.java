@@ -24,7 +24,7 @@ public class CreateEvent extends AppCompatActivity implements DatePickerDialog.O
 
     private static final int DIALOG_ID = 0;
     Button btn_pick,btn_create,btn_time;
-    EditText Name,Description;
+    EditText Destination,Description;
     int day,month,year,hour,minutes;
 
     @Override
@@ -35,7 +35,7 @@ public class CreateEvent extends AppCompatActivity implements DatePickerDialog.O
         btn_create = findViewById(R.id.EvCreateBtn);
         btn_pick = findViewById(R.id.btn_click);
         btn_time = findViewById(R.id.btn_time);
-        Name = findViewById(R.id.Ename);
+        Description = findViewById(R.id.Ename);
         Description = findViewById(R.id.desc);
         btn_pick.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,13 +51,13 @@ public class CreateEvent extends AppCompatActivity implements DatePickerDialog.O
         btn_create.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               String name = Name.getText().toString();
+               String destination = Description.getText().toString();
                 String description = Description.getText().toString();
 
                 FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
 
                 String organiser = firebaseUser.getUid().toString();
-                sendEvent(organiser,name,description,day,month,year,hour,minutes);
+                sendEvent(organiser,destination,description,day,month,year,hour,minutes);
                 finish();
             }
         });
@@ -71,11 +71,11 @@ public class CreateEvent extends AppCompatActivity implements DatePickerDialog.O
 
     }
 
-    private void sendEvent(String organiser,String name, String description, int day, int month, int year, int hour, int minutes) {
+    private void sendEvent(String organiser,String destination, String description, int day, int month, int year, int hour, int minutes) {
 
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
         HashMap<String,Object>hashMap = new HashMap<>();
-        hashMap.put("EventName",name);
+        hashMap.put("EventName",destination);
         hashMap.put("Description",description);
         hashMap.put("Organiser",organiser);
         hashMap.put("Day",day);

@@ -155,6 +155,7 @@ package com.example.hp.neveralone.Fragments;
         import com.google.firebase.iid.FirebaseInstanceId;
 
         import java.util.ArrayList;
+        import java.util.Iterator;
         import java.util.List;
 
 
@@ -229,6 +230,8 @@ public class ChatsFragment extends Fragment {
 
                 for(DataSnapshot snapshot : dataSnapshot.getChildren()){
                     User user = snapshot.getValue(User.class);
+
+
 
                     for(String id :usersList){
                         if(user.getId().equals(id)){
