@@ -27,15 +27,15 @@ public class SlideAdapter extends PagerAdapter {
 
     public String[] slider_headings = {
 
-            "EAT",
-            "SLEEP",
-            "CODE"
+            "TRAVEL",
+            "FIND COMPANIONS",
+            "ENJOY"
     };
 
     public String[] slide_descs = {
-            "TLorem ipsum sit ameit consectur aipiscing esit,send do",
-            "TLorem ipsum sit ameit consectur aipiscing esit,send do",
-            "TLorem ipsum sit ameit consectur aipiscing esit,send do"
+            "Add Travel Checklist,Create events,Make new friends",
+            "This app will help you to find travel companions for you",
+            "Chat,Create Polls,Share Photos and Enjoy"
     };
 
 
