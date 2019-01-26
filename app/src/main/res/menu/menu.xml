@@ -7,5 +7,8 @@
         android:title="Logout"
         app:showAsAction="never" />
 
+    <item android:id="@+id/Ev"
+        android:title="Event"/>
+
 
 </menu>

@@ -1,6 +1,7 @@
 package com.example.hp.neveralone;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
@@ -9,7 +10,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -17,11 +17,11 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.hp.neveralone.Fragments.ChatsFragment;
+import com.example.hp.neveralone.Fragments.EventFragment;
 import com.example.hp.neveralone.Fragments.ProfileFragment;
 import com.example.hp.neveralone.Fragments.UsersFragment;
 import com.example.hp.neveralone.Model.Chat;
 import com.example.hp.neveralone.Model.User;
-import com.example.hp.neveralone.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -104,6 +104,7 @@ public class MainActivity extends AppCompatActivity {
 
                 viewPagerAdapter.addFragment(new UsersFragment(),"Users");
                 viewPagerAdapter.addFragment(new ProfileFragment(),"Profile");
+                viewPagerAdapter.addFragment(new EventFragment(),"Event");
 
                 viewPager.setAdapter(viewPagerAdapter);
                 tabLayout.setupWithViewPager(viewPager);
@@ -134,6 +135,9 @@ public class MainActivity extends AppCompatActivity {
                 FirebaseAuth.getInstance().signOut();
                 startActivity(new Intent(MainActivity.this, LoginActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
                 finish();
+                return true;
+            case R.id.Ev :
+                startActivity(new Intent(MainActivity.this,CreateEvent.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
                 return true;
         }
         return  false;
