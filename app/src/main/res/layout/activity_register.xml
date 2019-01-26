@@ -27,7 +27,14 @@
         <com.rengwuxian.materialedittext.MaterialEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/username"
+            android:id="@+id/input_name"
+            android:layout_marginTop="10dp"
+            app:met_floatingLabel="normal"
+            android:hint="Name"/>
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/input_username"
             android:layout_marginTop="10dp"
             app:met_floatingLabel="normal"
             android:hint="Username"/>
@@ -35,11 +42,32 @@
         <com.rengwuxian.materialedittext.MaterialEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/email"
+            android:id="@+id/input_email"
             android:inputType="textEmailAddress"
             android:layout_marginTop="10dp"
             app:met_floatingLabel="normal"
             android:hint="Email"/>
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/input_address"
+            android:layout_marginTop="10dp"
+            app:met_floatingLabel="normal"
+            android:hint="Address"/>
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/input_institute"
+            android:layout_marginTop="10dp"
+            app:met_floatingLabel="normal"
+            android:hint="Institute(for Students)"/>
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/input_description"
+            android:layout_marginTop="10dp"
+            app:met_floatingLabel="normal"
+            android:hint="Add a Description of yours"/>
 
         <com.rengwuxian.materialedittext.MaterialEditText
             android:layout_width="match_parent"
@@ -54,7 +82,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="register"
-            android:id="@+id/btn_register"
+            android:id="@+id/btn_signup"
             android:background="@color/colorPrimaryDark"
             android:layout_marginTop="10dp"
             android:textColor="#fff"/>

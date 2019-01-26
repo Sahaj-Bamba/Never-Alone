@@ -10,7 +10,6 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.hp.neveralone.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -61,10 +60,24 @@ public class SplashActivtiy extends AppCompatActivity {
         mNextBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(mCurrentPage == mDots.length-1){
-                    Intent intent = new Intent(SplashActivtiy.this,LoginActivity.class);
+
+                if (mCurrentPage == mDots.length - 1) {
+                    Intent intent = new Intent(SplashActivtiy.this, StartActivity.class);
                     startActivity(intent);
                     finish();
+                } else if (mCurrentPage >= 0){
+                    viewPager.setCurrentItem(mCurrentPage + 1);
+                }
+
+            }
+        });
+
+
+        mBackbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (mCurrentPage >= 1) {
+                    viewPager.setCurrentItem(mCurrentPage - 1);
                 }
             }
         });
