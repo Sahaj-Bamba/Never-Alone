@@ -82,7 +82,7 @@ public class EventFragment extends Fragment {
             query.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                    if (search_events.getText().toString().equals("")) {
+                    if (!search_events.getText().toString().equals("")) {
                         mEvents.clear();
                         for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                             Event event = snapshot.getValue(Event.class);
