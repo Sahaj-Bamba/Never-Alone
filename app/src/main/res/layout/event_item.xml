@@ -7,8 +7,8 @@
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/event_image"
-        android:layout_width="154dp"
-        android:layout_height="121dp"
+        android:layout_width="148dp"
+        android:layout_height="186dp"
         android:src="@mipmap/ic_launcher" />
 
     <TextView
@@ -24,12 +24,12 @@
 
     <TextView
         android:id="@+id/event_desc"
-        android:layout_width="208dp"
-        android:layout_height="37dp"
+        android:layout_width="220dp"
+        android:layout_height="38dp"
         android:layout_above="@+id/event_image"
-        android:layout_marginStart="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginBottom="-78dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginBottom="-84dp"
         android:layout_toEndOf="@+id/event_image"
         android:layout_toRightOf="@+id/event_image"
         android:text="Event Description"
@@ -38,15 +38,29 @@
     <TextView
         android:id="@+id/event_date"
         android:layout_width="219dp"
-        android:layout_height="43dp"
+        android:layout_height="38dp"
         android:layout_alignTop="@+id/event_name"
         android:layout_marginStart="19dp"
         android:layout_marginLeft="19dp"
-        android:layout_marginTop="81dp"
+        android:layout_marginTop="92dp"
         android:layout_toEndOf="@+id/event_image"
         android:layout_toRightOf="@+id/event_image"
         android:text="Event Date"
         android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/user_event"
+        android:layout_width="219dp"
+        android:layout_height="43dp"
+        android:layout_alignTop="@+id/event_name"
+        android:layout_marginStart="19dp"
+        android:layout_marginLeft="19dp"
+        android:layout_marginTop="142dp"
+        android:layout_toEndOf="@+id/event_image"
+        android:layout_toRightOf="@+id/event_image"
+        android:text="Event Maker"
+        android:textSize="18sp" />
+
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">

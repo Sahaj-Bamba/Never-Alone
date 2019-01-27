@@ -47,7 +47,6 @@ public class EventFragment extends Fragment {
         recyclerView = view.findViewById(R.id.recycler_view_events);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        recyclerUser = view.findViewById(R.id.recycler_view_events);
         mEvents = new ArrayList<>();
 
         readEvents();
