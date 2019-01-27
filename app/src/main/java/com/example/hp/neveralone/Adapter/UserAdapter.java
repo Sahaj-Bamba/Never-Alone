@@ -147,9 +147,9 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
                         last_msg.setText("No message");
                         break;
 
-                        default:
-                            last_msg.setText(theLastMessage);
-                            break;
+                    default:
+                        last_msg.setText(theLastMessage);
+                        break;
                 }
 
                 theLastMessage = "default";

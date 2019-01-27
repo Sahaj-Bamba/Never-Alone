@@ -49,6 +49,10 @@
             android:parentActivityName=".StartActivity" />
         <activity android:name=".MessageActivity" />
         <activity
+            android:name=".view.TravelCheckList"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".MessageActivity" />
+        <activity
             android:name=".ResetPasswordActivity"
             android:parentActivityName=".LoginActivity"></activity>
         <activity

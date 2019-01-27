@@ -32,6 +32,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import com.example.hp.neveralone.view.TravelCheckList;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -139,7 +140,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.Ev :
                 startActivity(new Intent(MainActivity.this,CreateEvent.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
                 return true;
-
+            case R.id.menu_travel_checklist:
+                startActivity(new Intent(MainActivity.this,TravelCheckList.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
+                return true;
             case  R.id.companion :
                 startActivity(new Intent(MainActivity.this,Companion.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
                 return true;
