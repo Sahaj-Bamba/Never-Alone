@@ -6,60 +6,55 @@
     android:layout_height="wrap_content">
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
         android:id="@+id/event_image"
+        android:layout_width="154dp"
+        android:layout_height="121dp"
         android:src="@mipmap/ic_launcher" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="event_name"
         android:id="@+id/event_name"
-        android:layout_toRightOf="@+id/event_image"
+        android:layout_width="222dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_toEndOf="@+id/event_image"
-        android:layout_marginLeft="10dp"
-        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/event_image"
+        android:text="Event Name"
         android:textSize="18sp" />
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:layout_width="15dp"
-        android:layout_height="15dp"
-        app:civ_border_width="10dp"
-        app:civ_border_color="#05df29"
-        android:id="@+id/img_on"
-        android:visibility="gone"
-        android:src="@mipmap/ic_launcher"
-        android:layout_below="@id/event_name"
-        android:layout_marginTop="10dp"
+    <TextView
+        android:id="@+id/event_desc"
+        android:layout_width="208dp"
+        android:layout_height="37dp"
+        android:layout_above="@+id/event_image"
+        android:layout_marginStart="15dp"
         android:layout_marginLeft="15dp"
-        android:layout_toRightOf="@id/event_image"
-        android:layout_toEndOf="@id/event_image"/>
-
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:layout_width="15dp"
-        android:layout_height="15dp"
-        app:civ_border_width="10dp"
-        app:civ_border_color="#bfbfbf"
-        android:id="@+id/img_off"
-        android:visibility="gone"
-        android:src="@mipmap/ic_launcher"
-        android:layout_below="@id/event_name"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="15dp"
-        android:layout_toRightOf="@id/event_image"
-        android:layout_toEndOf="@id/event_image"/>
+        android:layout_marginBottom="-78dp"
+        android:layout_toEndOf="@+id/event_image"
+        android:layout_toRightOf="@+id/event_image"
+        android:text="Event Description"
+        android:textSize="18sp" />
 
     <TextView
+        android:id="@+id/event_date"
+        android:layout_width="219dp"
+        android:layout_height="43dp"
+        android:layout_alignTop="@+id/event_name"
+        android:layout_marginStart="19dp"
+        android:layout_marginLeft="19dp"
+        android:layout_marginTop="81dp"
+        android:layout_toEndOf="@+id/event_image"
+        android:layout_toRightOf="@+id/event_image"
+        android:text="Event Date"
+        android:textSize="18sp" />
+    <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/event_name"
-        android:layout_toRightOf="@id/event_image"
-        android:layout_marginTop="5dp"
-        android:paddingTop="5dp"
-        android:id="@+id/last_msg"
-        android:textColor="@color/colorPrimaryDark"
-        android:layout_marginLeft="20dp"
-        android:maxLines="1"/>
+        android:layout_height="wrap_content">
+
+
+
+    </RelativeLayout>
+
+
 
 </RelativeLayout>
