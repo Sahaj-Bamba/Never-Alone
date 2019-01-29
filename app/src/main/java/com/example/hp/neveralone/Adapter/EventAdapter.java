@@ -69,7 +69,7 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> 
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         for (DataSnapshot datasnapshot : dataSnapshot.getChildren()){
                             User user = datasnapshot.getValue(User.class);
-                            if (user.getId().equals(uid)) {
+                            if (user.getId()!=null && user.getId().equals(uid)) {
                                     u[0] = user.getUsername();
                                     Holder.event_user.setText(u[0]);
                             }
